@@ -1,0 +1,7 @@
+{
+  "name": "seq.uence",
+  "version": "v0.0.1",
+  "main": "./seq.js",
+  "scripts": { "test": "mocha" },
+  "devDependencies": { "mocha": "*" }
+}
