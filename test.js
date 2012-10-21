@@ -1,7 +1,7 @@
 
 var
   assert = require('assert'),
-  seq = require('../seq.js')
+  seq = require('./seq.js')
 
 describe('seq()', function() {
 
