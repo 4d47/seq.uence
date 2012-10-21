@@ -44,6 +44,7 @@ describe('seq()', function() {
       }
     )
   })
+
 })
 
 describe('seq.uence()', function() {
@@ -66,5 +67,21 @@ describe('seq.uence()', function() {
       }
     ], [], a)
   })
-})
 
+  it('should be possible to seq.uence list of values', function(done) {
+    seq.uence(
+      [ 1, 2, 3 ]
+        .map(function(value) {
+          return function(sum, next) {
+            next(sum + value)
+          }
+        })
+        .concat(function(sum) {
+          assert.equal(sum, 6)
+          done()
+        }),
+      [ 0 ]
+    )
+  })
+
+})
